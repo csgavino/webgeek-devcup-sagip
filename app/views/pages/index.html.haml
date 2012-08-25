@@ -1,6 +1,9 @@
 .row-fluid
-  .span3.well
+  .span3
     %h5 Search Feature
+    %form{:method => "post", :action => search_victims_path}
+      %input{:input => "text", :name => "name", :size => "50" }
+      %input{:type => "submit", :value => "Search"}
   .span9
     .modal{:style => "position: relative; top: auto; left: auto; margin: 0 auto 20px; z-index: 1; width:100%;"}
       .modal-header
@@ -9,12 +12,12 @@
         #map_canvas
       .modal-footer
         .placeholder These are the locations of our evacuation centers
-    
+
 %hr
 .row-fluid
   .span4
     %h4.red-text Hotlines
-    %table.table.table-bordered.table-condensed       
+    %table.table.table-bordered.table-condensed
       %tr
         %td
           %b NDRRMC
@@ -38,4 +41,4 @@
           TXT PNP to 2920
   .span8
     %h4.red-text News
-    
+

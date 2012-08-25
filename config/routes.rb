@@ -10,12 +10,11 @@ WebGeek::Application.routes.draw do
 
   get 'signout' =>  "sessions#destroy"
 
+  post 'search' => "victims#search", :as => 'search_victims'
 
   resources :shelters
 
   resources :victims
-
-
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
