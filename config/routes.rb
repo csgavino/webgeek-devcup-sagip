@@ -4,6 +4,10 @@ WebGeek::Application.routes.draw do
 
   get "pages/index"
 
+
+  resources :shelters
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
