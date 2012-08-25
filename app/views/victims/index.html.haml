@@ -1,3 +1,11 @@
-%form{:method => "post", :action => search_victims_path}
-  %input{:input => "text", :name => "name", :size => "50" }
-  %input{:type => "submit", :value => "Search"}
+.row-fluid
+  - unless current_user.nil?
+    .span3
+      %h4 Add a victim
+      = render "form"
+    .span9
+      = render :partial => "view", :locals => { :victims => @victims }
+  - else
+    .span12
+      = render :partial => "view", :locals => { :victims => @victims }
+
