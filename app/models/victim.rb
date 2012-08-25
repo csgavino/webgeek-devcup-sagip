@@ -11,9 +11,23 @@ class Victim < ActiveRecord::Base
   CRITICAL = 1
   SICK  = 2
   ALIVE = 3
+  DECEASED = 4
 
   scope :name_like, lambda { |victim_name|
     { :conditions => ["name ~* ?", victim_name] }
   }
+
+  def to_status
+    case self.status
+    when CRITICAL
+      "Critical"
+    when SICK
+      "Sick"
+    when ALIVE
+      "Alive"
+    when DECEASED
+      "Deceased"
+    end
+  end
 
 end
