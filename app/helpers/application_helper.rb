@@ -15,4 +15,8 @@ module ApplicationHelper
     end
   end
   
+  def row_clickable
+    return "location.href = this.getElementsByTagName('a').item(0).getAttribute('href');"
+  end
+  
 end
