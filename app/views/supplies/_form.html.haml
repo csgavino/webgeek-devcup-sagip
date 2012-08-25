@@ -1,0 +1,8 @@
+= simple_form_for @supply do |f|
+  = f.input :code, :include_blank => false, :collection => { "Food" => 1, "Water" => 2, "First Aid Kit" => 3 }
+
+  = f.input :quantity, :include_blank => false, :collection => 1..32
+
+  = f.association :shelter, :include_blank => false
+
+  = f.button :submit

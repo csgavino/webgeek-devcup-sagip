@@ -3,7 +3,6 @@
 %div#address{:style => "display:none"}
   = "#{@shelter.latitude}, #{@shelter.longitude}"
 
-
 .row-fluid
   .span6
     .modal{:style => "position: relative; top: auto; left: auto; margin: 0 auto 20px; z-index: 1; width:100%;"}
@@ -15,6 +14,10 @@
         #map_canvas{:style => "height: 300px; width: 100%"}
 
   .span6
+    %p
+      = "This shelter is #{@shelter.capacity_in_percent}% full!"
+
+
 
 
 
