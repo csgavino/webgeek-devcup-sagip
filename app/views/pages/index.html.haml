@@ -1,2 +1,41 @@
-%h1 Index Page
-%p Lorem ipsum
+.row-fluid
+  .span3.well
+    %h5 Search Feature
+  .span9
+    .modal{:style => "position: relative; top: auto; left: auto; margin: 0 auto 20px; z-index: 1; width:100%;"}
+      .modal-header
+        %h4.red-text Evacuation Centers
+      .modal-body{:style => "padding:0px"}
+        #map_canvas
+      .modal-footer
+        .placeholder These are the locations of our evacuation centers
+    
+%hr
+.row-fluid
+  .span4
+    %h4.red-text Hotlines
+    %table.table.table-bordered.table-condensed       
+      %tr
+        %td
+          %b NDRRMC
+        %td.placeholder
+          (02) 911-1406
+          %br
+          (02) 912-2665
+      %tr
+        %td
+          %b REDCROSS
+        %td.placeholder
+          143
+          %br
+          (02) 911-1876
+      %tr
+        %td
+          %b PNP
+        %td.placeholder
+          711
+          %br
+          TXT PNP to 2920
+  .span8
+    %h4.red-text News
+    
