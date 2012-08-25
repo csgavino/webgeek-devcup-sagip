@@ -11,7 +11,7 @@
       - victims.each do |victim|
         %tr.selectable{:onclick => row_clickable}
           %td
-            = link_to "", victims_path(victim)
+            = link_to "", victim_path(victim)
             = victim.name
           %td= victim.age
           %td= victim.description
