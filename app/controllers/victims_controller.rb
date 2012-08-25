@@ -2,6 +2,10 @@ class VictimsController < ApplicationController
   def index
   end
 
+  def show
+    @victim = Victim.find_by_id(params[:id])
+  end
+
   def new
     @victim = Victim.new
     @shelters = Shelter.all
@@ -21,7 +25,8 @@ class VictimsController < ApplicationController
     end
   end
 
-    def search
+  def search
     @victims = Victim.name_like(params[:name])
   end
+
 end
