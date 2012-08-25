@@ -14,8 +14,25 @@
         #map_canvas{:style => "height: 300px; width: 100%"}
 
   .span6
-    %p
-      = "This shelter is #{@shelter.capacity_in_percent}% full!"
+    .modal{:style => "position: relative; top: auto; left: auto; margin: 0 auto 20px; z-index: 1; width:100%;"}
+      .modal-header
+        %h5 Shelter Population
+      .modal-footer
+        %table.table.table-condensed
+          %tr
+            %td
+              %b Status
+            %td
+              %p
+                = "This shelter is #{@shelter.capacity_in_percent}% full!"
+          %tr
+            %td
+              %b Total Capacity
+            %td
+              ="#{@shelter.capacity}"
+          
+
+    
 
 
 
