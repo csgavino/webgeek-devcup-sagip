@@ -4,6 +4,13 @@ class Shelter < ActiveRecord::Base
   after_validation :geocode
   has_many :victims
 
+  validates_presence_of :name, :maximum => 255
+
+  validates_presence_of :address, :maximum => 255
+
+  validates_presence_of :capacity
+  validates_numericality_of :capacity, :greater_than => 0, :less_than => 50000, :only_integer => true
+
   def to_label
     address
   end
