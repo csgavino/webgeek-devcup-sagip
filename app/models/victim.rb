@@ -1,5 +1,5 @@
 class Victim < ActiveRecord::Base
-  belongs_to :shelter
+  belongs_to :shelter, :counter_cache => true
   belongs_to :user
   attr_accessible :age, :description, :name, :shelter_id, :status, :user_id
 
