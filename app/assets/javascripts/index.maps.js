@@ -3,7 +3,7 @@ $(document).ready(function() {
   var makati = new google.maps.LatLng(14.554729, 121.0244452);
   var myOptions = {
     center: makati,
-    zoom: 8,
+    zoom: 10,
     mapTypeId: google.maps.MapTypeId.ROADMAP
   };
 
