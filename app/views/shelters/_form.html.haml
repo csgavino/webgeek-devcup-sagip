@@ -1,6 +1,9 @@
 = simple_form_for @shelter do |f|
-  = f.input :name, :label => false, :placeholder => "Enter name of center"
+  .placeholder Name
+  = f.input :name, :label => false, :placeholder => "Name of center"
+  .placeholder Address
   = f.input :address, :label => false
-  = f.input :capacity, :label => false, :placeholder => "Enter capacity. (e.g. 500000)"
+  .placeholder Capacity
+  = f.input :capacity, :label => false, :placeholder => "(e.g. 500000)"
   = f.button :submit, :class => "btn btn-info"
 = javascript_include_tag "autocomplete"

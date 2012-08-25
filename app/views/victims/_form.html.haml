@@ -1,12 +1,13 @@
 = simple_form_for @victim do |f|
-  = f.input :name
-
-  = f.input :age
-
-  = f.input :status, :include_blank => false, :collection => { :ALIVE => 3, :SICK => 2, :CRITICAL => 1 }
-
-  = f.input :description
-
-  = f.association :shelter, :include_blank => false
+  .placeholder Name
+  = f.input :name, :label => false, :input_html => {:class => 'span12', :placeholder => "Juan Dela Cruz"}
+  .placeholder Age
+  = f.input :age, :label => false, :input_html => {:class => 'span12', :placeholder => ""}
+  .placeholder Status
+  = f.input :status, :label => false, :include_blank => false, :collection => { :ALIVE => 3, :SICK => 2, :CRITICAL => 1 }, :input_html => {:class => 'span12'}
+  .placeholder Description
+  = f.input :description, :label => false, :input_html => {:class => 'span12', :rows => 3, :placeholder => "Write description here..."}
+  .placeholder Shelter
+  = f.association :shelter, :label => false, :include_blank => false, :input_html => {:class => 'span12'}
 
   = f.button :submit

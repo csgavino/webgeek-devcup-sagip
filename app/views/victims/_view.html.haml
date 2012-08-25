@@ -1,0 +1,21 @@
+.modal{:style => "position: relative; top: auto; left: auto; margin: 0 auto 20px; z-index: 1; width:100%;"}
+  .modal-header
+    %h4.red-text Victims
+  .modal-body{:style => "padding:0px"}
+    %table.table
+      %th Name
+      %th Age
+      %th Description
+      %th Shelter
+      %th Status
+      - victims.each do |victim|
+        %tr.selectable{:onclick => row_clickable}
+          %td
+            = link_to "", victims_path(victim)
+            = victim.name
+          %td= victim.age
+          %td= victim.description
+          %td= victim.shelter.name
+          %td= victim.to_status
+  .modal-footer
+    .placeholder These are the locations of our evacuation centers
