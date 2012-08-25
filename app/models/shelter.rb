@@ -1,3 +1,4 @@
 class Shelter < ActiveRecord::Base
-  attr_accessible :address, :capacity, :latitude, :longitude
+  has_many :victims
+  attr_accessible :name, :address, :capacity, :latitude, :longitude
 end

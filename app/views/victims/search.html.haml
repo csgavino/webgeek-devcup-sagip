@@ -1,0 +1,23 @@
+- if !@victims.empty?
+  %table.table
+    %thead
+      %th Name
+      %th Age
+      %th Description
+      %th Shelter
+      %th Managed By
+    %tbody
+      - @victims.each do |victim|
+        %tr
+          %td
+            = victim.name
+          %td
+            = victim.age
+          %td
+            = victim.description
+          %td
+            = victim.shelter.name
+          %td
+            = victim.user.name
+
+
