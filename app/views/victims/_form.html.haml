@@ -1,0 +1,12 @@
+= simple_form_for @victim do |f|
+  = f.input :name
+
+  = f.input :age, :collection => 1..120
+
+  = f.input :status, :include_blank => false, :collection => { :ALIVE => 3, :SICK => 2, :CRITICAL => 1 }
+
+  = f.input :description
+
+  = f.association :shelter, :include_blank => false
+
+  = f.button :submit
