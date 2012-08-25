@@ -39,10 +39,17 @@
               = nav_link "Hotlines", ""
               = nav_link "Donations", ""
               
-              
-            %a.block.pull-right.btn.btn-danger{:href => "#" }
-              Volunteer Login
+            -if current_user.blank?
+              %a.block.pull-right.btn.btn-danger{:href => signin_path}
+                Volunteer Login
+            -else
+              %a.block.pull-right.btn.btn-inverse{:href => signout_path}
+                Logout
     .container
+      - flash.each do |key, value|
+        %div.alert.fade.in{:class => "alert alert-#{key}", 'data-alert' => "alert"}
+          =#%a.close{:href => '#', 'data-dismiss' => "alert"} &times;
+          = value
       = yield
 
 = javascript_include_tag controller_name
