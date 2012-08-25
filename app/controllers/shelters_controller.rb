@@ -1,5 +1,7 @@
 class SheltersController < ApplicationController
   def index
+    @shelter = Shelter.new
+    @shelters = Shelter.all
   end
 
   def show

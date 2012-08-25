@@ -28,14 +28,14 @@
             %span.icon-bar
             %span.icon-bar
             %span.icon-bar
-          %a.brand{:href => "#"}
+          %a.brand{:href => root_path}
             %b 
               %span.red-text Sagip
           .nav-collapse.collapse{:style => "height: 0px;  "}
             %ul.nav
               = nav_link "Home", root_path
-              = nav_link "Search Victims", ""
-              = nav_link "Evacuation Camps", ""
+              = nav_link "Victims", victims_path
+              = nav_link "Evac Shelters", shelters_path
               = nav_link "Hotlines", ""
               = nav_link "Donations", ""
               

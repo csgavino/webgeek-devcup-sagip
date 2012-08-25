@@ -1,0 +1,25 @@
+
+.row-fluid
+  .span3
+    %h4 Add Shelter
+    = render "form"
+  .span9
+    .modal{:style => "position: relative; top: auto; left: auto; margin: 0 auto 20px; z-index: 1; width:100%;"}
+      .modal-header
+        %h4.red-text Evacuation Centers
+      .modal-body{:style => "padding:0px"}
+        %table.table
+          %th Name
+          %th Address
+          %th Capacity
+          - @shelters.each do |shelter|
+            %tr.selectable{:onclick => row_clickable}
+              %td
+                = link_to "", shelter_path(shelter)
+                = shelter.name
+              %td= shelter.address
+              %td= shelter.capacity
+      .modal-footer
+        .placeholder These are the locations of our evacuation centers
+
+    

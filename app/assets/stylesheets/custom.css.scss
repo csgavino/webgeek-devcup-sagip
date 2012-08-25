@@ -6,3 +6,10 @@
   font-size: 0.85em;
   color: #8e8e8e;
 }
+
+tr.selectable{cursor: hand; cursor: pointer;}
+tr.selectable:hover{cursor: hand; cursor: pointer; background:#f5f5f5}
+
+tr.highlight-row{background:#edfdeb;}
+tr.ghost-row{background:#eeeeee;color:#888;}
+tr.ghost-row-lite{background:#f3f3f3;}
