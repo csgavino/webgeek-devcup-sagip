@@ -1,5 +1,8 @@
 class VictimsController < ApplicationController
   def index
+    @victims = Victim.all
+    @victim = Victim.new
+    @shelters = Shelter.all
   end
 
   def show
@@ -18,7 +21,7 @@ class VictimsController < ApplicationController
     @victim = Victim.new(params[:victim])
     @victim.user_id = current_user.id
     if @victim.save
-      redirect_to @victim,
+      redirect_to victims_path,
         :notice => "#{@victim.name} was successfully created."
     else
       render action: "new"
