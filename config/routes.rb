@@ -1,6 +1,6 @@
 WebGeek::Application.routes.draw do
 
-  root :to => 'sessions#new'
+  root :to => 'pages#index'
 
   #Sessions
 
