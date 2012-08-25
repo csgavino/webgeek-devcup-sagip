@@ -1,5 +1,8 @@
 = simple_form_for @shelter do |f|
   = f.input :address
+
+  = f.input :capacity
+
   = f.button :submit
 
 = javascript_include_tag "autocomplete"

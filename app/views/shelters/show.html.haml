@@ -3,4 +3,8 @@
 %div#address{:style => "display:none"}
   = "#{@shelter.latitude}, #{@shelter.longitude}"
 
+
+%p
+  = "This shelter is #{@shelter.capacity_in_percent}% full!"
+
 #map_canvas{:style => "height: 300px; width: 300px"}
