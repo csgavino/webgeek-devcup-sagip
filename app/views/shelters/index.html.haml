@@ -1,0 +1,6 @@
+= javascript_include_tag "index.maps"
+
+= content_tag "div", id: "shelters", data: {shelters: Shelter.all} do
+  &nbsp
+
+#map_canvas{:style =>"height: 600px; width: 600px" }
