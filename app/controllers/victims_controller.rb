@@ -1,5 +1,4 @@
 class VictimsController < ApplicationController
-
   def index
   end
 

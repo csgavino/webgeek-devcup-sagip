@@ -15,6 +15,8 @@ WebGeek::Application.routes.draw do
 
   resources :victims
 
+  resources :supplies
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
