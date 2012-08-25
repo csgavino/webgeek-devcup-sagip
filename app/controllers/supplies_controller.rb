@@ -7,6 +7,10 @@ class SuppliesController < ApplicationController
     @shelters = Shelter.all
   end
 
+  def show
+    @supply = Supply.find_by_id(params[:id])
+  end
+
   def create
     @supply = Supply.new(params[:supply])
     if @supply.save
