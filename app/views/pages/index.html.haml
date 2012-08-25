@@ -1,3 +1,6 @@
+= javascript_include_tag "smart.info.window"
+= javascript_include_tag "index.maps"
+
 .row-fluid
   .span3
     %h5 Search for your loved ones
@@ -8,8 +11,11 @@
     .modal{:style => "position: relative; top: auto; left: auto; margin: 0 auto 20px; z-index: 1; width:100%;"}
       .modal-header
         %h4.red-text Evacuation Centers
+        = content_tag "div", id: "shelters", data: {shelters: Shelter.all} do
+          &nbsp
+
       .modal-body{:style => "padding:0px"}
-        #map_canvas
+        #map_canvas{:style => "height: 600px; width: 100%"}
       .modal-footer
         .placeholder These are the locations of our evacuation centers
 
