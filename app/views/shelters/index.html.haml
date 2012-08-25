@@ -1,3 +1,6 @@
+= javascript_include_tag "smart.info.window"
+= javascript_include_tag "index.maps"
+
 .row-fluid
   - unless current_user.nil?
     .span3
@@ -9,3 +12,8 @@
     .span12
       = render :partial => "view", :locals => {:shelters => @shelters }
 
+
+= content_tag "div", id: "shelters", data: {shelters: Shelter.all} do
+  &nbsp
+
+#map_canvas{:style =>"height: 600px; width: 600px" }
