@@ -17,7 +17,7 @@ class SheltersController < ApplicationController
     @shelter = Shelter.new(params[:shelter])
     if @shelter.save
       redirect_to @shelter,
-        :notice => "Shelter was successfully created"
+        :notice => "Shelter was successfully created."
     else
       render action: "new"
     end
