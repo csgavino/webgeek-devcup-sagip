@@ -4,7 +4,7 @@
   .placeholder Age
   = f.input :age, :label => false, :input_html => {:class => 'span12', :placeholder => ""}
   .placeholder Status
-  = f.input :status, :label => false, :include_blank => false, :collection => { :ALIVE => 3, :SICK => 2, :CRITICAL => 1 }, :input_html => {:class => 'span12'}
+  = f.input :status, :label => false, :include_blank => false, :collection => { :ALIVE => 3, :SICK => 2, :CRITICAL => 1, :DECEASED => 4 }, :input_html => {:class => 'span12'}
   .placeholder Description
   = f.input :description, :label => false, :input_html => {:class => 'span12', :rows => 3, :placeholder => "Write description here..."}
   .placeholder Shelter
