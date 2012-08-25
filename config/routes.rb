@@ -1,6 +1,6 @@
 WebGeek::Application.routes.draw do
 
-  root :to => 'sessions#new'
+  root :to => 'pages#index'
 
   #Sessions
 
@@ -12,8 +12,9 @@ WebGeek::Application.routes.draw do
 
   post 'search' => "victims#search", :as => 'search_victims'
 
-  resources :victims
+  resources :shelters
 
+  resources :victims
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
