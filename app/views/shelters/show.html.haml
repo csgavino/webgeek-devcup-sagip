@@ -3,8 +3,21 @@
 %div#address{:style => "display:none"}
   = "#{@shelter.latitude}, #{@shelter.longitude}"
 
+.row-fluid
+  .span6
+    .modal{:style => "position: relative; top: auto; left: auto; margin: 0 auto 20px; z-index: 1; width:100%;"}
+      .modal-header
+        %b= @shelter.name
+        .placeholder= @shelter.address
+          
+      .modal-body{:style => "padding:0px"}
+        #map_canvas{:style => "height: 300px; width: 100%"}
 
-%p
-  = "This shelter is #{@shelter.capacity_in_percent}% full!"
+  .span6
+    %p
+      = "This shelter is #{@shelter.capacity_in_percent}% full!"
 
-#map_canvas{:style => "height: 300px; width: 300px"}
+
+
+
+
