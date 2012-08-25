@@ -2,9 +2,19 @@
   color: #aa0030;
 }
 
+.content{
+  padding-top:40px;
+}
+
 .placeholder{
   font-size: 0.85em;
   color: #8e8e8e;
+}
+
+.index-search-bg{
+	background-image: url('/images/bg_red.png');
+	background-repeat: no-repeat;
+	background-size: 100% 300px;
 }
 
 tr.selectable{cursor: hand; cursor: pointer;}
