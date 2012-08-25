@@ -28,13 +28,20 @@
             %span.icon-bar
             %span.icon-bar
             %span.icon-bar
-          %a.brand{:href => "#"} プロジェクト
+          %a.brand{:href => "#"}
+            %b 
+              %span.red-text Sagip
           .nav-collapse.collapse{:style => "height: 0px;  "}
             %ul.nav
-              %li.active
-                = link_to "Home", "#"
-            %a.pull-right.btn.btn-warning{:href => "#" }
-              Login
+              = nav_link "Home", root_path
+              = nav_link "Search Victims", ""
+              = nav_link "Evacuation Camps", ""
+              = nav_link "Hotlines", ""
+              = nav_link "Donations", ""
+              
+              
+            %a.block.pull-right.btn.btn-danger{:href => "#" }
+              Volunteer Login
     .container
       = yield
 
