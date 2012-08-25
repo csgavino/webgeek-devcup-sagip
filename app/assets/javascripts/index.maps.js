@@ -20,9 +20,11 @@ $(document).ready(function() {
   }
 
   function makeMarker(position, shelter) {
+    var latlng = new google.maps.LatLng(lat, long)
+
     var marker = new google.maps.Marker({
       map: map,
-      position: new google.maps.LatLng(lat, long)
+      position: latlng
     });
     markers.push(marker);
 
@@ -36,7 +38,10 @@ $(document).ready(function() {
     '</div>';
 
     google.maps.event.addListener(marker, 'click', function(e) {
-      var infobox = new SmartInfoWindow({position: marker.getPosition(), map: map, content: content});
+      var info = new google.maps.InfoWindow();
+      info.setContent(content);
+      info.setPosition(latlng);
+      info.open(map);
     });
 
   }
