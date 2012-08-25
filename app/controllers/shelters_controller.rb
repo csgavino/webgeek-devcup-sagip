@@ -3,6 +3,7 @@ class SheltersController < ApplicationController
   end
 
   def show
+    @shelter = Shelter.find_by_id(params['id'])
   end
 
   def new
