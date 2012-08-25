@@ -1,24 +1,10 @@
-
 .row-fluid
-  .span3
-    %h4 Add a victim
-    = render "form"
-  .span9
-    .modal{:style => "position: relative; top: auto; left: auto; margin: 0 auto 20px; z-index: 1; width:100%;"}
-      .modal-header
-        %h4.red-text Victims
-        %form.form-search{:method => "post", :action => search_victims_path}
-          %input{:type => "text", :name => "name", :size => "50" }
-          %input.btn.btn-info{:type => "submit", :value => "Search"}
-      .modal-body{:style => "padding:0px"}
-        %table.table
-          %th Name
-          %th Age
-          %th Description
-          - @victims.each do |victim|
-            %tr
-              %td= victim.name
-              %td= victim.age
-              %td= victim.description
-      .modal-footer
-        .placeholder These are the locations of our evacuation centers
+  - unless current_user.nil?
+    .span3
+      %h4 Add a victim
+      = render "form"
+    .span9
+      = render :partial => "view", :locals => { :victims => @victims }
+  - else
+    .span12
+      = render :partial => "view", :locals => { :victims => @victims }
