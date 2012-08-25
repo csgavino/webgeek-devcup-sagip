@@ -9,44 +9,47 @@
         %form.simple_form{:method => "post", :action => search_victims_path}
           %input.span12{:type => "text", :name => "name", :size => "50", :placeholder => "Juan Dela Cruz" }
           %input.span12.btn.btn-info{:type => "submit", :value => "Look for this person"}
+    .modal{:style => "position: relative; top: auto; left: auto; margin: 0 auto 20px; z-index: 1; width:100%;"}
+      .modal-header
+        %h5 Hotlines
+      .modal-footer
+        %table.table.table-condensed
+          %tr
+            %td
+              %b NDRRMC
+            %td.placeholder
+              (02) 911-1406
+              %br
+              (02) 912-2665
+          %tr
+            %td
+              %b REDCROSS
+            %td.placeholder
+              143
+              %br
+              (02) 911-1876
+          %tr
+            %td
+              %b PNP
+            %td.placeholder
+              711
+              %br
+              TXT PNP to 2920
+        
+    
   .span9
     .modal{:style => "position: relative; top: auto; left: auto; margin: 0 auto 20px; z-index: 1; width:100%;"}
       .modal-header
         %h4.red-text Evacuation Centers
-        = content_tag "div", id: "shelters", data: {shelters: Shelter.all} do
+        = content_tag "div", id: "shelters", :style =>"display:none", data: {shelters: Shelter.all} do
           &nbsp
-
       .modal-body{:style => "padding:0px"}
-        #map_canvas{:style => "height: 600px; width: 100%"}
+        #map_canvas{:style => "height: 400px; width: 100%"}
       .modal-footer
         .placeholder These are the locations of our evacuation centers
 
 %hr
 .row-fluid
-  .span4
-    %h4.red-text Hotlines
-    %table.table.table-bordered.table-condensed
-      %tr
-        %td
-          %b NDRRMC
-        %td.placeholder
-          (02) 911-1406
-          %br
-          (02) 912-2665
-      %tr
-        %td
-          %b REDCROSS
-        %td.placeholder
-          143
-          %br
-          (02) 911-1876
-      %tr
-        %td
-          %b PNP
-        %td.placeholder
-          711
-          %br
-          TXT PNP to 2920
-  .span8
+  .span12
     %h4.red-text News
 

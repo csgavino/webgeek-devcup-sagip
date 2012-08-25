@@ -11,7 +11,9 @@ WebGeek::Application.routes.draw do
   get 'signout' =>  "sessions#destroy"
 
   post 'search' => "victims#search", :as => 'search_victims'
-
+  
+  get 'donations' => "pages#donations", :as => 'donations'
+  
   resources :shelters
 
   resources :victims
