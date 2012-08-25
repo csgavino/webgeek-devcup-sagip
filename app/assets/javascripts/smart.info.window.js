@@ -111,7 +111,7 @@ SmartInfoWindow.prototype.draw = function() {
   this.div_.style.top = (pixPosition.y + this.offsetY_) + centerOffsetY + 'px';
   //this.div_.style.paddingTop = paddingTop + 'px';
   //this.div_.style.paddingLeft = paddingLeft + 'px';
-  this.div_.style.background = 'url("../images/' + image + '")';
+  this.div_.style.background = 'url("/images/' + image + '")';
   this.div_.style.display = 'block';
 
   this.wrapperDiv_.style.width = (this.width_- widthLess) + 'px';
@@ -154,7 +154,7 @@ SmartInfoWindow.prototype.createElement = function() {
     var topDiv = document.createElement('div');
     topDiv.style.textAlign = 'right';
     var closeImg = document.createElement('img');
-    closeImg.src = '../images/closebigger.gif';
+    closeImg.src = '/images/closebigger.gif';
     closeImg.style.width = '32px';
     closeImg.style.height = '32px';
     closeImg.style.cursor = 'pointer';
