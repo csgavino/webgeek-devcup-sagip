@@ -16,8 +16,7 @@ class Shelter < ActiveRecord::Base
   end
 
   def capacity_in_percent
-    (victims.count / capacity) * 100
+    (victims_count / capacity.to_f) * 100
   end
-
 
 end

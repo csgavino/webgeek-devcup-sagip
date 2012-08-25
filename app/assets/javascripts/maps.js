@@ -5,8 +5,8 @@ function initialize() {
 
   var myOptions = {
     center: new google.maps.LatLng(arr[0], arr[1]),
-    zoom: 8,
-    mapTypeId: google.maps.MapTypeId.ROADMAP
+    zoom: 11,
+    mapTypeId: google.maps.MapTypeId.ROADMAP,
   };
 
   var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
@@ -21,6 +21,3 @@ function initialize() {
 $(document).ready(function() {
   initialize();
 })
-
-
-
