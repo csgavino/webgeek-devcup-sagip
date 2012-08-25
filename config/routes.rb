@@ -1,8 +1,18 @@
 WebGeek::Application.routes.draw do
 
-  root :to => "pages#index"
+  root :to => 'sessions#new'
 
-  get "pages/index"
+  #Sessions
+
+  get 'signin' => "sessions#new"
+
+  post 'signin' => "sessions#create", :as => 'signin_post'
+
+  get 'signout' =>  "sessions#destroy"
+
+
+  resources :shelters
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
