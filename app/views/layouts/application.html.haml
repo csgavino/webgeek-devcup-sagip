@@ -20,7 +20,8 @@
     =# %link{:href => "/images/apple-touch-icon-114x114.png", :rel => "apple-touch-icon", :sizes => "114x114"}/
 
     - current_path = request.env['PATH_INFO']
-  %body
+    - container_div_class = "index-search-bg" if current_path == root_path
+  %body{ :class => container_div_class }
     .navbar.navbar-fixed-top
       .navbar-inner
         .container
@@ -45,12 +46,14 @@
             -else
               %a.block.pull-right.btn.btn-inverse{:href => signout_path}
                 Logout
-    .container
-      - flash.each do |key, value|
-        %div.alert.fade.in{:class => "alert alert-#{key}", 'data-alert' => "alert"}
-          =#%a.close{:href => '#', 'data-dismiss' => "alert"} &times;
-          = value
-      = yield
+    %div
+      .container
+        .content
+          - flash.each do |key, value|
+            %div.alert.fade.in{:class => "alert alert-#{key}", 'data-alert' => "alert"}
+              =#%a.close{:href => '#', 'data-dismiss' => "alert"} &times;
+              = value
+          = yield
 
 = javascript_include_tag controller_name
 
