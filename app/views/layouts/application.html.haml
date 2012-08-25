@@ -37,8 +37,7 @@
               = nav_link "Home", root_path
               = nav_link "Victims", victims_path
               = nav_link "Evac Shelters", shelters_path
-              = nav_link "Hotlines", ""
-              = nav_link "Donations", ""
+              = nav_link "Donations", donations_path
               
             -if current_user.blank?
               %a.block.pull-right.btn.btn-danger{:href => signin_path}
