@@ -1,0 +1,6 @@
+= javascript_include_tag "maps"
+
+%div#address{:style => "display:none"}
+  = "#{@shelter.latitude}, #{@shelter.longitude}"
+
+#map_canvas{:style => "height: 300px; width: 300px"}

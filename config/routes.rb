@@ -10,6 +10,10 @@ WebGeek::Application.routes.draw do
 
   get 'signout' =>  "sessions#destroy"
 
+
+  resources :shelters
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
