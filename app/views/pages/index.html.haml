@@ -41,4 +41,34 @@
           TXT PNP to 2920
   .span8
     %h4.red-text News
+    %div#myCarousel.carousel.slide
+      %div.carousel-inner
+        %div.active.item
+          = image_tag "flood1.jpeg"
+          %div.carousel-caption
+            %h4
+              Waist Deep Floods are abound in the area.
+            %p
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et
+        %div.item
+          = image_tag "flood2.jpeg"
+          %div.carousel-caption
+            %h4 Lorem ipsum dolor sit amet, consectetuer adipiscing
+            %p
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et
+        %div.item
+          = image_tag "flood3.jpeg"
+          %div.carousel-caption
+            %h4 Lorem ipsum dolor sit amet, consectetuer adipiscing
+            %p
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et
+        %div.item
+          = image_tag "flood4.jpeg"
+          %div.carousel-caption
+            %h4 Lorem ipsum dolor sit amet, consectetuer adipiscing
+            %p
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et
+      %a.carousel-control.left{:href => "#myCarousel", "data-slide"=>"prev", "data-interval"=>2000} &lsaquo;
+      %a.carousel-control.right{:href=>"#myCarousel", "data-slide"=>"next", "data-interval"=>2000} &rsaquo;
+
 
